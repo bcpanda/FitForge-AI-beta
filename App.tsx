@@ -4,6 +4,7 @@ import Header from './components/Header';
 import FitnessTracker from './components/FitnessTracker';
 import SupplementStore from './components/SupplementStore';
 import WelcomeModal from './components/WelcomeModal';
+import AddToHomeScreenPrompt from './components/AddToHomeScreenPrompt';
 import type { View } from './types';
 
 const App: React.FC = () => {
@@ -61,6 +62,7 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen font-sans">
       {showWelcome && <WelcomeModal onClose={handleCloseWelcome} />}
+      <AddToHomeScreenPrompt />
       <div 
         className="fixed inset-0 z-[-1] bg-brand-super-dark bg-cover bg-center transition-all duration-500"
         style={{ backgroundImage: wallpaper ? `url(${wallpaper})` : 'none' }}
